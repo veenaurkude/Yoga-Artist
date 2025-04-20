@@ -1,0 +1,531 @@
+/* .homeContainer {
+  position: relative;
+  background-image: url("../../assets/bg/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: clamp(1rem, 5vw, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.overlay {
+
+  background: linear-gradient(to bottom, rgba(215, 38, 56, 0.7), rgba(255, 200, 200, 0.6));
+  background: linear-gradient(to bottom, rgba(255, 182, 193, 0.5), rgba(135, 206, 235, 0.5));
+  background: linear-gradient(to bottom, rgba(44, 13, 18, 0.7), rgba(0, 0, 0, 0.8));
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 1rem;
+}
+
+.heading {
+  font-size: clamp(2rem, 6vw, 3.8rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nameAccent {
+  color: #ffd700;
+  font-style: italic;
+  font-family: "Dancing Script", cursive;
+}
+
+.subheading {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+  color: #f0f0f0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.ctaBtn {
+  padding: 0.9rem 2.5rem;
+  background-color: #fff;
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.ctaBtn:hover {
+  background-color: #ffd700;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.signature {
+  margin-top: 2rem;
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  color: #ffd700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.socialIcon {
+  width: 2rem;
+  height: 2rem;
+  color: #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+  color: #ffd700;
+  transform: scale(1.2);
+}
+
+.scrollHint {
+  margin-top: 3rem;
+  font-size: 1rem;
+  color: #f0f0f0;
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.9;
+}
+
+.arrow {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-right: 2px solid #f0f0f0;
+  border-bottom: 2px solid #f0f0f0;
+  transform: rotate(45deg);
+  margin-top: 0.5rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: rotate(45deg) translateY(0);
+  }
+  50% {
+    transform: rotate(45deg) translateY(10px);
+  }
+}
+
+@media (max-width: 640px) {
+  .heading {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+  }
+
+  .subheading {
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  }
+
+  .ctaBtn {
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+  }
+
+  .socialIcon {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: clamp(3rem, 6vw, 4.2rem);
+  }
+
+  .subheading {
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroContent {
+    padding: 0 2rem;
+  }
+
+  .heading {
+    font-size: clamp(3.5rem, 6vw, 4.8rem);
+  }
+
+  .subheading {
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+  }
+
+  .ctaBtn {
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+  }
+} */
+
+.homeContainer {
+  position: relative;
+  background-image: url("../../assets/bg/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: clamp(1rem, 5vw, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(44, 13, 18, 0.7), rgba(0, 0, 0, 0.8));
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  font-size: clamp(2rem, 6vw, 3.8rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nameAccent {
+  color: #e7c100;
+  font-style: italic;
+  font-family: "Dancing Script", cursive;
+}
+
+.subheading {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  margin-bottom: 2.5rem;
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
+  color: #f0f0f0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.ctaContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.ctaBtn {
+  padding: 0.9rem 2.5rem;
+  background-color: #fff;
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.ctaBtn:hover {
+  background-color: #e7c100;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.secondaryBtn {
+  padding: 0.8rem 2.3rem;
+  background: transparent;
+  border: 2px solid #e7c100;
+  color: #e7c100;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.secondaryBtn:hover {
+  background-color: #e7c100;
+  color: #1a1a1a;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.signature {
+  margin-top: 1.5rem;
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  color: #e7c100;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+.scrollHint {
+  margin-top: 3rem;
+  font-size: 1rem;
+  color: #f0f0f0;
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.9;
+}
+
+.arrow {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-right: 2px solid #f0f0f0;
+  border-bottom: 2px solid #f0f0f0;
+  transform: rotate(45deg);
+  margin-top: 0.5rem;
+  animation: bounce 2s infinite;
+}
+
+.artworkSection {
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 5vw, 2rem);
+  background: url("../../assets/bg/banner_img.jpg") center/cover no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+  position: relative;
+}
+
+.artworkSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.artworkHeading {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #fafafa;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.artworkGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.artworkCard {
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.artworkCard:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.artworkFrame {
+  padding: 1.2rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+  border: 4px solid #e7c100;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artworkImage {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.artworkTitle {
+  color: #1a1a1a;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.artworkLink {
+  padding: 0.8rem 2rem;
+  background-color: #fff;
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.artworkLink:hover {
+  background-color: #e7c100;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Ensure these styles are in your Home.module.css (no changes needed) */
+
+.viewMoreContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.viewMoreBtn {
+  padding: 0.8rem 2rem;
+  background-color: #fff;
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.viewMoreBtn:hover {
+  background-color: #e7c100;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Add for mobile responsiveness */
+@media (max-width: 640px) {
+  .viewMoreBtn {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: rotate(45deg) translateY(0);
+  }
+  50% {
+    transform: rotate(45deg) translateY(10px);
+  }
+}
+
+/* Responsive Typography and Spacing */
+@media (max-width: 640px) {
+  .heading {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+  }
+
+  .subheading {
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  }
+
+  .ctaBtn,
+  .secondaryBtn {
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+  }
+
+  .socialIcon {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .artworkImage {
+    height: 200px;
+  }
+
+  .artworkGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .artworkFrame {
+    padding: 0.8rem;
+    border-width: 3px;
+  }
+
+  .artworkTitle {
+    font-size: 1.2rem;
+  }
+
+  .artworkLink {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: clamp(3rem, 6vw, 4.2rem);
+  }
+
+  .subheading {
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+  }
+
+  .ctaContainer {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroContent {
+    padding: 0 2rem;
+  }
+
+  .heading {
+    font-size: clamp(3.5rem, 6vw, 4.8rem);
+  }
+
+  .subheading {
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+  }
+
+  .ctaBtn,
+  .secondaryBtn {
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+  }
+
+  .artworkImage {
+    height: 350px;
+  }
+
+  .artworkFrame {
+    padding: 1.5rem;
+  }
+}

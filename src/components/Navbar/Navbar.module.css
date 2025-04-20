@@ -1,0 +1,128 @@
+.headerContainer {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* background: linear-gradient(to bottom, rgba(44, 13, 18, 0.7), rgba(44, 13, 18, 0.7)); */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+  }
+  
+  .logoTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+    transition: color 0.3s ease;
+  }
+  
+  .title {
+    text-decoration: none;
+    color: #e7c100;
+    transition: color 0.3s ease;
+  }
+  
+  .title:hover {
+    color: #ceac00; 
+  }
+  
+  @media screen and (max-width: 768px) {
+    .logoTitle {
+      font-size: 1.4rem;
+      text-align: left;
+    }
+  }
+  
+  
+  .menuButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .icon {
+    width: 28px;
+    height: 28px;
+    color: #333;
+  }
+  
+  /* NavLinks base */
+  .navLinks {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .navLink {
+    text-decoration: none;
+    color: #333;
+    /* color: #f0f0f0; */
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navLink:hover {
+    color: #ceac00;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .menuButton {
+      display: block;
+    }
+  
+    .navLinks {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      flex-direction: column;
+      width: 100%;
+      /* background-color: rgba(255, 255, 255, 0.97); */
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transform: translateY(-20px);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+  
+    .showMenu {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  
+    .navLink {
+      padding: 1rem 2rem;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header {
+      padding: 1rem;
+    }
+  
+    .logoTitle {
+      font-size: 1.5rem;
+    }
+  
+    .icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  

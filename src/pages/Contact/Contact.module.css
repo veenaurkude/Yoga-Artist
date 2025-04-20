@@ -1,0 +1,131 @@
+.contactContainer {
+  padding: 4rem;
+  margin: auto;
+  background: url("https://www.transparenttextures.com/patterns/az-subtle.png") repeat;
+  background-color: #f0f0f0;
+  /* background: #fdfaf6 url("../../assets/images/paper-texture.png") repeat; */
+  /* background-size: cover; */
+  /* width: 100%; */
+  /* max-width: 1200px; */
+  /* padding: 2rem 1rem; */
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 600px;
+  margin: auto;
+}
+
+.contactContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.infoSection,
+.form {
+  background: #f0f0f0;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.icon {
+  font-size: 1.6rem;
+  color: #e7c100;
+}
+
+.infoItem a {
+  color: #444;
+  text-decoration: none;
+}
+
+.infoItem a:hover {
+  text-decoration: underline;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form input,
+.form textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  /* width: 100%; */
+  font-family: inherit;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #e7c100;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(181, 110, 42, 0.2);
+}
+
+.form button {
+  background-color: #e7c100;
+  color: white;
+  padding: 0.9rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #ceac00;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .contactContent {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .infoSection,
+  .form {
+    flex: 1;
+  }
+
+  .header h1 {
+    font-size: 3rem;
+  }
+
+  .header p {
+    font-size: 1.3rem;
+  }
+}

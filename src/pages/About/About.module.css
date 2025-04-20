@@ -1,0 +1,71 @@
+.aboutContainer {
+  padding: 4rem 2rem;
+  /* background: #fdfaf6; */
+  color: #2e2e2e;
+  background-color: #f0f0f0;
+  background: url("https://www.transparenttextures.com/patterns/asfalt-dark.png")
+    repeat;
+}
+
+.headerSection {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.headerSection h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.headerSection p {
+  font-style: italic;
+  color: #555;
+}
+
+.aboutContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.textBlock {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+}
+
+.textBlock h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.textBlock p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.imageBlock {
+  flex: 1;
+  max-width: 400px;
+}
+
+.imageBlock img {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .aboutContent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .textBlock h2 {
+    font-size: 1.6rem;
+  }
+}

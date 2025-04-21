@@ -28,15 +28,41 @@
     transition: color 0.3s ease;
   }
   
-  .title {
+  /* .title {
     text-decoration: none;
-    color: #e7c100;
+    color: #ffa700;
     transition: color 0.3s ease;
   }
   
   .title:hover {
-    color: #ceac00; 
+    color: #ffa700; 
+  } */
+
+  .title {
+    position: relative;
+    text-decoration: none;
+    color: #ffa700;
+    transition: color 0.3s ease;
+    display: inline-block;
   }
+  
+  .title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: #ffa700;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .title:hover::after {
+    transform: scaleX(1);
+  }
+  
   
   @media screen and (max-width: 768px) {
     .logoTitle {
@@ -65,17 +91,47 @@
     gap: 1rem;
   }
   
-  .navLink {
+  /* .navLink {
     text-decoration: none;
     color: #333;
-    /* color: #f0f0f0; */
     font-weight: 500;
     padding: 0.5rem 1rem;
     transition: color 0.3s ease;
   }
   
   .navLink:hover {
-    color: #ceac00;
+    color: #ffa700;
+  } */
+  
+  .navLink {
+    position: relative;
+    text-decoration: none;
+    color: #333; /* or #f0f0f0 if you're using light text */
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+    display: inline-block;
+  }
+  
+  .navLink::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    width: 100%;
+    height: 0.5px;
+    background-color: #ffa700;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .navLink:hover {
+    color: #ffa700;
+  }
+  
+  .navLink:hover::after {
+    transform: scaleX(1);
   }
   
   /* Responsive styles */
@@ -90,7 +146,7 @@
       left: 0;
       flex-direction: column;
       width: 100%;
-      /* background-color: rgba(255, 255, 255, 0.97); */
+      background-color: rgba(255, 255, 255, 0.97);
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       transform: translateY(-20px);
       opacity: 0;

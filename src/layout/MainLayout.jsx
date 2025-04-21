@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { motion } from "framer-motion";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import styles from "./MainLayout.module.css";
@@ -18,13 +19,24 @@ const MainLayout = () => {
   }, []);
 
   return (
-    <div className={styles.layoutContainer}>
-      <Navbar />
-      <main className={styles.mainContent}>
-        <Outlet />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <div className={styles.layoutContainer}>
+        <Navbar />
+
+        <main className={styles.mainContent}>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <Outlet />
+          </motion.div>
+        </main>
+
+        <Footer />
+      </div>
+    </>
   );
 };
 

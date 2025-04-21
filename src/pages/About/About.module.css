@@ -13,14 +13,16 @@
 }
 
 .headerSection h1 {
-  font-family: "Playfair Display", serif;
+  /* font-family: "Playfair Display", serif; */
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
 .headerSection p {
+  font-size: 1.2rem;
   font-style: italic;
   color: #555;
+  font-weight: 700;
 }
 
 .aboutContent {
@@ -46,6 +48,8 @@
   line-height: 1.7;
   margin-bottom: 1rem;
   text-align: justify;
+  /* font-weight: bold; */
+  font-size: 20px;
 }
 
 .imageBlock {

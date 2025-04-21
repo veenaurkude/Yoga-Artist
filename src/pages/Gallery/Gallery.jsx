@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import styles from "./Gallery.module.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Tilt from "react-parallax-tilt";
+import { motion } from "framer-motion";
 
 // Import your artworks
 import img1 from "../../assets/images/img1.jpg";
@@ -42,48 +42,61 @@ const images = [
 const Gallery = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1200, // Slower zoom-in
-      offset: 100,
-      easing: "ease-out", // Smooth, natural easing
+      duration: 800,
+      offset: 150,
+      easing: "ease-in-out",
       delay: 0,
       once: true,
     });
   }, []);
 
   return (
-    <section className={styles.galleryContainer}>
-      <div className={styles.overlay}></div>
-      <div className={styles.content}>
-        <h2 className={styles.heading} data-aos="fade-down">
-          Gallery
-        </h2>
-        <p className={styles.intro} data-aos="fade-up">
-          A canvas of inner peace, passion, and vibrant expression.
-        </p>
-        <div className={styles.grid}>
-          {images.map((src, idx) => (
-            
-            <div
-            className={styles.imageWrapper}
-            key={idx}
-            data-aos="zoom-in"
-            data-aos-delay={idx * 200}
-            data-aos-duration="500"
-            data-aos-easing="ease-out"
-            data-aos-anchor-placement="top-center"
-          >
-            
-            <img
-              src={src}
-              alt={`Artwork ${idx + 1}`}
-              className={styles.image}
-            />
-            
+    <>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.5 }}
+        transition={{ duration: 0.5 }}
+      >
+        <section className={styles.galleryContainer}>
+          <div className={styles.overlay}></div>
+          <div className={styles.content}>
+            <h2 className={styles.heading} data-aos="fade-down">
+              Gallery
+            </h2>
+            <p className={styles.intro} data-aos="fade-up">
+              A canvas of inner peace, passion, and vibrant expression.
+            </p>
+
+            <div className={styles.grid}>
+              {images.map((src, idx) => (
+                <motion.div
+                className={styles.imageWrapper}
+                key={idx}
+                data-aos="flip-up"
+                data-aos-delay={idx * 150}
+                data-aos-duration="800"
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 12px 30px rgba(0, 0, 0, 0.2)",
+                }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
+                <img
+                  src={src}
+                  alt={`Artwork ${idx + 1}`}
+                  loading="lazy"
+                  className={styles.image}
+                />
+              </motion.div>
+              
+              ))}
+            </div>
           </div>
-          ))}
-        </div>
-      </div>
-    </section>
+        </section>
+      </motion.div>
+    </>
   );
 };
 

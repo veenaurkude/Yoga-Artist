@@ -1,75 +1,149 @@
+/* Footer Container */
 .footerContainer {
-    background-color: #111;
-    color: #fff;
-    padding: 2rem 1rem;
-    text-align: center;
+  background-color: #111;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+/* Footer Content */
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Social Icons */
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Icon Styling */
+.icon {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+}
+
+.icon:hover {
+  color: #ffa700;
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Copyright Text */
+.copy {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Responsive Design */
+
+/* Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+  .footerContainer {
+    padding: 1.5rem 0.5rem; /* Reduced padding for small screens */
   }
-  
-  .footerContent {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
+
   .logo {
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+    font-size: 1.5rem; /* Smaller logo */
+    margin-bottom: 0.8rem;
   }
-  
+
   .socialIcons {
-    display: flex;
-    justify-content: center;
-    gap: 1.2rem;
-    margin-bottom: 1rem;
-    flex-wrap: wrap;
+    gap: 0.8rem; /* Reduced gap */
+    margin-bottom: 0.8rem;
   }
-  
+
   .icon {
-    color: #fff;
-    font-size: 1.3rem;
-    transition: color 0.3s ease;
+    font-size: 1rem; /* Smaller icons */
   }
-  
-  .icon:hover {
-    color: #b56e2a;
-  }
-  
+
   .copy {
-    font-size: 0.9rem;
-    opacity: 0.7;
+    font-size: 0.8rem; /* Smaller text */
+    margin-bottom: 1rem;
   }
-  
-  /* Tablet & up */
-  @media (min-width: 640px) {
-    .logo {
-      font-size: 2rem;
-    }
-  
-    .icon {
-      font-size: 1.5rem;
-    }
-  
-    .copy {
-      font-size: 1rem;
-    }
+}
+
+/* Tablet Devices (481px to 1023px) */
+@media (min-width: 481px) and (max-width: 1023px) {
+  .footerContainer {
+    padding: 2rem 1rem; /* Default padding with slight adjustment */
   }
-  
-  /* Desktop & up */
-  @media (min-width: 1024px) {
-    .footerContent {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      text-align: left;
-      padding: 0 2rem;
-    }
-  
-    .logo {
-      margin-bottom: 0;
-    }
-  
-    .socialIcons {
-      margin-bottom: 0;
-    }
+
+  .footerContent {
+    padding: 0 1rem; /* Internal padding */
   }
-  
+
+  .logo {
+    font-size: 1.9rem; /* Slightly larger logo */
+    margin-bottom: 1rem;
+  }
+
+  .socialIcons {
+    gap: 1rem; /* Moderate gap */
+    margin-bottom: 1rem;
+  }
+
+  .icon {
+    font-size: 1.3rem; /* Slightly larger icons */
+  }
+
+  .copy {
+    font-size: 0.95rem; /* Slightly larger text */
+    margin-bottom: 1rem;
+  }
+}
+
+/* Tablet & Desktop (640px and above) - Original Tablet Breakpoint */
+@media (min-width: 640px) {
+  .logo {
+    font-size: 2rem; /* Larger logo */
+  }
+
+  .icon {
+    font-size: 1.5rem; /* Larger icons */
+  }
+
+  .copy {
+    font-size: 1rem; /* Larger text */
+    margin-bottom: 1rem;
+  }
+}
+
+/* Desktop Devices (1024px and above) - Original Desktop Breakpoint */
+@media (min-width: 1024px) {
+  .footerContainer {
+    padding: 2rem 2rem; /* Increased padding for desktop */
+  }
+
+  .footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 0 2rem;
+  }
+
+  .logo {
+    margin-bottom: 0;
+  }
+
+  .socialIcons {
+    margin-bottom: 0;
+    justify-content: flex-end; /* Align icons to the right */
+  }
+
+  .copy {
+    text-align: right; /* Align copyright to the right */
+  }
+}
